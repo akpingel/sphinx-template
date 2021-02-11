@@ -12,7 +12,8 @@ software.
    :caption: Contents:
 
    chapter1/index
-   chapter2/index
    bibliography/index
+   chapter2/index
+
 
 
