@@ -15,6 +15,7 @@ release and Visual Studio is one of the most common IDE to develop in.
    chapter2/index
    bibliography/index
    outline/index
+   firstDraft/index
 
 
 
