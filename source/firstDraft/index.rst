@@ -96,7 +96,7 @@ object is an Int, String, Boolean, or an object of a class. This type is useful
 when the programmer doesn't want all fields to be required. [#f6]_ For example,
 for a person object, you might have their name and age, but not their date of
 birth, so using an anonymous type allows you to not fill in that field, but
-still have access to the methods get_Age and get_Name.
+still have access to the methods, such as get_Age and get_Name.
 
 Lambda expressions are anonymous functions, which is similar to Javascript in
 style. The lambda operator ``=>`` divides the defined function into two parts:
@@ -113,7 +113,7 @@ lambda expression:
 
 Lastly, Language-Integrated Query (LINQ) extends C#'s capabilities into
 allowing for query expressions to be made. This allows the language to perform
-SQL operations using C# syntax. These SQL-style queries were beneficial to
+SQL operations using C# syntax. These SQL-style queries are beneficial to
 perform on collections. The following is an example using LINQ: [#f6]_
 
   .. code-block:: c#
@@ -133,6 +133,7 @@ perform on collections. The following is an example using LINQ: [#f6]_
 Output: [#f6]_
 
   .. image:: linqOutput.png
+    :width: 300
 
   ..
 
@@ -159,48 +160,52 @@ then add six to it and not have a compiler error because dynamic is assumed to
 support any operation. Errors that occur from using the keyword dynamic will
 be caught from the runtime and throw a runtime exception.
 
-  * C# 1.0 [#f4]_
-    * Major Features
-    * Released with Visual Studio .Net 2002
-    * Looked like Java
-    * Started as a generic Object-Oriented (OO) Language
-  * C# 2.0 [#f6]_
+C# 5.0
+~~~~~~
 
-    * Released with Visual Studio 2005
-    * Changed the generic OO Language
+C# 5.0 was released with Visual Studio 2012. The two main purposes of this
+release were to incorporate ``async`` and ``await`` concepts for asynchronous
+programming. "When these features came out in 2012, C# changed the game again
+by baking asynchrony into the language as a first-class participant." [#f4]_
+These two words go hand in hand. When the compiler sees the word ``async`` it
+looks for the word ``await``.
 
-      * Quote - "C# version 2.0 brought iterators. To put it succinctly,
-        iterators let you examine all the items in a List \(or other Enumerable
-        types\) with a foreach loop. Having iterators as a first-class part of
-        the language dramatically enhanced readability of the language and
-        people's ability to reason about the code."  [#f4]_
+Sample: [#f6]_
 
-    * C# still trying to catch up with Java
+  .. code-block:: c#
 
-  * C# 3.0 --> this release included the release of Visual Studio 2008
+    static void Main(string[] args)
+    {
+      Console.WriteLine("SlowMethod started at...{0}",
+        DateTime.Now.ToLongTimeString());
+      SlowMethod();
+      Console.WriteLine("Awaiting for SlowMethod...");
+      Console.ReadLine();
+    }
+    static async Task SlowMethod()
+    {
+      // Simulation of slow method "Sleeping" the thread for 3 secs.
+      await Task.Run(new Action(() => System.Threading.Thread.Sleep(3000)));
+      Console.WriteLine("Finished at: {0}",
+        DateTime.Now.ToLongTimeString());
+      return;
+    }
 
-    * Marked major growth in C#
-    * Established C# as a respected programming language
-    * LINQ
-    * QUOTE: "C# 3.0 presented a revolutionary concept. C# 3.0 had begun to lay
-      the groundwork for turning C# into a hybrid Object-Oriented / Functional
-      language." [#f4]_
+  ..
 
-    * Could now write SQL-style queries to perform operations
-    * Query and lambda expressions
 
-  * C# 4.0
+Output: [#f6]_
 
-    * Released with Visual Studio 2010
-    * Embedded interop types alleviated deployment pain
-    * Optional parameters helped avoid method overloads
-    * Introduction of the keyword dynamic
+  .. image:: awaitOutput.png
+    :width: 300
 
-  * C# 5.0
+  ..
 
-    * Released with Visual Studio 2012
-    * Async and await for asynchronous programming
-    * Caller info attributes
+
+Another smaller part of this release was caller info attributes. This
+enhancement is beneficial for diagnostics and logging, but didn't have as big
+of an impact as the ``async`` and ``await`` concepts.
+
 
 * Major Point 2 - History of C# Versions 6.0 through 8.0 focused on smaller releases.
 
