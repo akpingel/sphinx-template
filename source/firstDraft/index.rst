@@ -132,7 +132,7 @@ perform on collections. The following is an example using LINQ: [#f6]_
 
 Output: [#f6]_
 
-  .. image:: linqOutput.png
+  .. image:: linq_output.png
     :width: 300
 
   ..
