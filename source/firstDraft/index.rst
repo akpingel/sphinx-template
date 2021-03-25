@@ -1,6 +1,9 @@
 C# First Draft
 ==============
 
+History of C#
+-------------
+
 **Thesis:**
 Understanding C# and its history to determine relevance in today's world
 compared to other languages.
@@ -47,47 +50,59 @@ compared to other languages.
 
 * Major Point 1 - History of C# [#f4]_
 
+C# 1.0
+~~~~~~
 
 C# 1.0 was the first release of a new object-oriented language made by
-Microsoft and if you used it for the first time, you would be able to tell the
-similarities to Java. "As part of its
+Microsoft. There were a lot of similarities to Java. "As part of its
 stated design goals, it sought to be a 'simple, modern, general-purpose object
-oriented language.'" [#f4]_ This new software was greatly compatible with Windows
-products, the same capability that many other Microsoft applications were
-geared towards. Within this first release, the major C# features were: classes,
-structs, interfaces, events, properties, delegates, operators and expressions,
-statements, and attributes. Several key features that are used in programming
-today were not yet utilized in this development language.
+oriented language.'" [#f4]_
+
+This new software started out as only compatible
+with Windows products. Within this first release, the major C# features were:
+classes, structs, interfaces, events, properties, delegates, operators and
+expressions, statements, and attributes. Several key features that are used in
+programming today, such as generics and LINQ, were not yet utilized in this
+development language, but would be developed later on.
+
+C# 2.0
+~~~~~~
 
 C# 2.0 was released in 2005 with Visual Studio 2005. This version release
 included new features and added improvements to existing features changing the
 generic object-oriented language. "The first actual fundamental change that
 took place in the language was the incorporation of Generics." [#f6]_ Generics
-allows for code to be reused. For example, a List<T> is a generic
+allows for code to be reused. For example, a ``List<T>`` is a generic
 List that can then be used for Ints or if the programmer changes
 their mind, it can be used as a List of strings. Programmers can change what
 is in the list without going back and changing the list type where it was first
-defined. The namespace System.Collection.Generic supports this feature.
+defined. The namespace ``System.Collection.Generic`` supports this feature.
+
 Another important feature in this release was iterators. "Iterators let you
 examine all the items in a List \(or other Enumerable types\) with a foreach
 loop. Having iterators as a first-class part of the language dramatically
 enhanced readability of the language and people's ability to reason about the
 code."  [#f4]_ C# still wasn't up to the capabilities of the Java language,
 however, the new added features helped it attempt to catch up to current
-favorite programming languages.
+popular programming languages.
+
+C# 3.0
+~~~~~~
 
 A major milestone of C# was in the 3.0 release in 2007 due to its establishment
 of Lambda expressions, anonymous types and LINQ. Anonymous types allows objects
-to be invoked with a new operator "var". This operator doesn't declare if the
+to be invoked with a new operator ``var``. This operator doesn't declare if the
 object is an Int, String, Boolean, or an object of a class. This type is useful
 when the programmer doesn't want all fields to be required. [#f6]_ For example,
 for a person object, you might have their name and age, but not their date of
 birth, so using an anonymous type allows you to not fill in that field, but
-still have access to the methods get_Age and get_Name. Lambda expressions are
-anonymous functions, which is similar to Javascript in style. The lambda
-operator (=>) divides the defined function into two parts: the arguments to the
-left and the body to the right. [#f6]_ For example: if you wanted to find if a
-number is divisible by 2 or 3 you could use the following lambda expression:
+still have access to the methods get_Age and get_Name.
+
+Lambda expressions are anonymous functions, which is similar to Javascript in
+style. The lambda operator ``=>`` divides the defined function into two parts:
+the arguments to the left and the body to the right. [#f6]_ For example: if you
+wanted to find if a number is divisible by 2 or 3 you could use the following
+lambda expression:
 
   .. code-block:: c#
 
@@ -117,10 +132,18 @@ perform on collections. The following is an example using LINQ: [#f6]_
 
 Output: [#f6]_
 
-    * include the output of running the sample code above
+  .. image:: linqOutput.png
+
+  ..
+
 
 The features included in this released help label C# as a respected programming
-language. [#f4]_  The next release of C# in 2010, version 4.0 had some new
+language. [#f4]_
+
+C# 4.0
+~~~~~~
+
+The next release of C# in 2010, version 4.0 had some new
 features, but none that compared to the previous release. The following
 were included in this release: [#f6]_
 
