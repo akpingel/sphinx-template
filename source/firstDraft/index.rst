@@ -4,22 +4,14 @@ C# First Draft
 History of C#
 -------------
 
-**Thesis:**
-Understanding C# and its history to determine relevance in today's world
-compared to other languages.
+Overview
+""""""""
+C# was created by Microsoft. It was first developed in 2000 by Anders Hejlsberg
+as a rival to Java because the creators of Java did not want Microsoft
+to make changes to their programming language. [#f5]_ Microsoft's new language
+would be a new runner for the top coding language used by programmers.
 
-
-* Intro - Understanding C#
-
-  * Where did C# originate from?
-
-    * Created by Microsoft
-    * Developed in 2000 by Anders Hejlsberg at Microsoft as a rival to Java [#f5]_
-    * Created because Sun, (eventually bought by Oracle), did not want
-      Microsoft to make changes to Java, so Microsoft decided to make it's own
-      language instead. [#f5]_
-
-  * QUOTE: "One of the key differences between C# and these other languages,
+    "One of the key differences between C# and these other languages,
     particularly Java, is that we tried to stay much closer to C++ in our
     design. C# borrows most of its operators, keywords, and statements directly
     from C++. But beyond these more traditional language issues, one of our key
@@ -28,18 +20,23 @@ compared to other languages.
     Concepts such as properties, methods, events, attributes, and documentation
     are all first-class language constructs." (page 54 from creator) [#f6]_
 
-  * C# is strongly, dynamically typed
+A key factor of C# is that it is strongly, dynamically typed. Being a strong
+typed language means that any attempt to pass a wrong kind of parameter as an
+argument, or assigning the wrong value, will generate a compilation error. [#f6]_
+The graphic below shows that JavaScript and C++ are some of the weaker types
+languages.
 
-    * Include graphic from book that compares C# with other languages
-      and compares dynamic/static and strong/weak [#f6]_ page 55
+  .. image:: dynamicStrong.png
+    :width: 500
+    :align: center
+  ..
 
-  * What is C# used for?
+Dynamic means that rules are applied at runtime, compared to static languages
+that apply their rules at compile time. [#f6]_ In the figure, Python and Clojure
+are more dynamic than C#, but C# is more dynamic than Scala or C++.
 
-    * Website Development
-    * Windows Application
-    * Games
-
-  * Example of programs and applications written in C# [#f2]_
+C# is used for website development, applications, and games. The following are
+examples of programs, applications, and games written in C#: [#f2]_
 
     * Microsoft Visual Studio
     * Paint.NET
@@ -48,10 +45,13 @@ compared to other languages.
     * Banshee
     * FlashDevelop
 
-* Major Point 1 - History of C# [#f4]_
+To get to the advance steps of creating an application or game, it is
+important to start with the basics and learn the fundamentals of the
+programming language. Understanding C# and its history to determine relevance
+in today's world compared to other languages.
 
 C# 1.0
-~~~~~~
+""""""
 
 C# 1.0 was the first release of a new object-oriented language made by
 Microsoft. There were a lot of similarities to Java. "As part of its
@@ -66,7 +66,7 @@ programming today, such as generics and LINQ, were not yet utilized in this
 development language, but would be developed later on.
 
 C# 2.0
-~~~~~~
+""""""
 
 C# 2.0 was released in 2005 with Visual Studio 2005. This version release
 included new features and added improvements to existing features changing the
@@ -87,7 +87,7 @@ however, the new added features helped it attempt to catch up to current
 popular programming languages.
 
 C# 3.0
-~~~~~~
+""""""
 
 A major milestone of C# was in the 3.0 release in 2007 due to its establishment
 of Lambda expressions, anonymous types and LINQ. Anonymous types allows objects
@@ -142,7 +142,7 @@ The features included in this released help label C# as a respected programming
 language. [#f4]_
 
 C# 4.0
-~~~~~~
+""""""
 
 The next release of C# in 2010, version 4.0 had some new
 features, but none that compared to the previous release. The following
@@ -161,7 +161,7 @@ support any operation. Errors that occur from using the keyword dynamic will
 be caught from the runtime and throw a runtime exception.
 
 C# 5.0
-~~~~~~
+""""""
 
 C# 5.0 was released with Visual Studio 2012. The two main purposes of this
 release were to incorporate ``async`` and ``await`` concepts for asynchronous
@@ -206,32 +206,127 @@ Another smaller part of this release was caller info attributes. This
 enhancement is beneficial for diagnostics and logging, but didn't have as big
 of an impact as the ``async`` and ``await`` concepts.
 
+C# 6.0
+""""""
 
-* Major Point 2 - History of C# Versions 6.0 through 8.0 focused on smaller releases.
+C# 6.0 was released with Visual Studio 2015. This release focused on smaller
+aspects of the language rather than adding major new features. This allowed
+the language to be more productive and make the code more readable. Additional
+features include:
 
-  * C# 6.0
+  * String interpolation
+  * Exception filters
+  * The nameof operator
+  * The null-conditional operator
+  * Auto-property initializer
+  * Static using declarations
+  * Expression bodied methods
+  * Index initializer
 
-    * Released with Visual Studio 2015
-    * Moved towards smaller features that made C# more productive
-    * This release made code more readable
-    * Released Roslyn the compiler as a service
+Exception filters allows successful code to continue to run, and failed code
+will throw an error message to tell you why the code won't work instead of
+failing your program. You can also utilize to to do something else when the
+failed code occurs.
 
-      * C# compiler now written in C# and the compiler can be utilized for
-        programming efforts
+This version release included Roslyn the compiler as a service which was written
+in C#. [#f4]_ A compiler in the same language as your code allows new benefits
+in the IDE for editing and compiling your code.
 
-  * C# 7.0
 
-    * Released with Visual Studio 2017
-    * New features with new capabilities that makes code even cleaner
-    * .NET Core targets any operating system
-    * Condensed the declaration of variables to use with the out keyword by
-      allowing multiple return values via tuple
+C# 7.0
+""""""
 
-  * C# 7.1 through 7.3
 
-    * 7.1 - async method
-    * 7.2 - private protected access modifier, conditional of ref expressions
-    * 7.3 - provides new features to support safe code and enhancements
+C# 7.0 was released with Visual Studio 2017. The most important features of
+this release include new support for tuples and deconstructions. You no longer
+have to use the ``Tuple`` Class to declare tuples thanks to pattern matching,
+the compiler can handle declarations that include a tuple syntax next to a var
+definition. [#f6]_
+
+  .. code-block:: c#
+
+    (int n, string s) = ( 8, "coding" );
+
+  ..
+
+
+Function sample: [#f6]_
+
+
+  .. code-block:: c#
+
+    static (int sum, int count) ProcessArray(List numbers)
+    {
+      var result = (sum:0 , count:0);
+      numbers.ForEach(n =>
+      {
+        result.count++;
+        result.sum += n;
+      });
+      return result;
+    }
+
+  ..
+
+
+For this function, the return valid is a tuple. This allows a sum of numbers
+and the count of the numbers being added to be calculated.
+
+Deconstruction allows us to deconstruct/decompose an object into parts. The
+``Deconstruct`` method must be defined to deconstruct and object. For example,
+decomposing a DateTime Value declaration would look like this: [#f6]_
+
+  .. code-block:: c#
+
+    static void Deconstruct(this DateTime dt, out int hour, out int minute,
+      out int second)
+    {
+      hour = dt.Hour;
+      minute = dt.Minute;
+      second = dt.Second;
+    }
+
+  ..
+
+The following are point releases and the new features and enhancements
+included in each version.
+
+
+  C# 7.1
+
+    * async Main method
+    * default literal expressions
+    * inferred tuple element names
+    * pattern matching on generic type parameters
+
+  C# 7.2
+
+    * ``private protected`` access modifier
+    * conditional ref expressions (``?:``)
+    * leading underscores for numeric literals before printed digits
+
+  C# 7.3
+
+    * ability to test ``==`` and ``!=`` with tuple types
+    * fixed statements can be used with any type that supports a pattern
+    * additional generic constraints
+
+
+
+C# 8.0
+""""""
+
+C# 8.0 targets .NET Core. Some features rely on new CLR capabilites, other on
+library types added only in .NET Core C#. [#f4]_ The following are some of
+the new features and enhancements to the language:
+
+  * Readonly members
+  * Default interface methods
+  * Pattern matching enhancements
+  * Nullable reference types
+  * Stackalloc in nested expressions
+
+
 
   * C# 8.0
 
@@ -242,24 +337,24 @@ of an impact as the ``async`` and ``await`` concepts.
 
 * Major Point 3 - Current Version of C# - 9.0 (references for step 3 [#f8]_ [#f9]_)
 
-  * Date of release
-  * What changed? [#f8]_
+C# 9.0
+""""""
 
-    * Part of .NET 5 - journey toward a single .NET ecosystem
-    * Focus on modern workloads - applications and services being built today
-    * Many C# 9.0 features rely on .NET 5.0
+The newest version of C# is 9.0. It was released on ______ and relies on and is
+only compatible with .NET 5. "C# 9.0 focuses on features that support native
+cloud applications, modern software engineering practices, and more concise
+readable code. The biggest new features within this release are:
 
-      * Focuses on features that support cloud applications, modern
-        engineering practices, and more readable code
+  * Top-level statements
+  * Record types
+  * Init-only setters
+  * Enhancements to pattern matching
+  * Function pointers
 
-  * New features
-
-    * Top-level statements - cleans up code [#f9]_
-
-    * Include code sample of the changes [#f8]_
-
-
-    * Before:
+Top-level Statements
+~~~~~~~~~~~~~~~~~~~~
+Top-level statements was included in this release to reduce irrelevant code.
+The previous version of a simple "Hello world!" program would be the following: [#f8]_
 
     .. code-block:: python
 
@@ -277,7 +372,9 @@ of an impact as the ``async`` and ``await`` concepts.
 
         ..
 
-    * After:
+
+With the new release, this code would be simplified to:
+
 
     .. code-block:: python
 
@@ -286,43 +383,105 @@ of an impact as the ``async`` and ``await`` concepts.
 
     ..
 
-    * Record types -> include sample code
-    * Init-only setters -> include sample code
-    * Enhancements to pattern matching
-    * Function pointers
+Only code that performs that action required is necessary with the new top-level
+statements that replace the ``Main`` function in programs. Like the ``Main``
+function, there can only be one top-level function within the program. If two
+statements are included, the compiler will send an error.
 
-  * What's new? [#f9]_
+Record Types
+~~~~~~~~~~~~
 
-    * Non-destructive mutation
-    * Objects that are more like values
-    * Done with record notion
-    * Explain what it means to be a record
-    * Show sample code of a person class
-
-* Major Point 4 - Comparison to Other Languages and Example Applications
-
-  * Java - include sample code to compare Hello World
+Records provide a type declaration for an immutable reference type that uses
+value semantics for equality. [#f8]_
 
     .. code-block:: python
 
-        class HelloWorld {
-        public static void main(String[] args) {
-            System.out.println("Hello, World!");
-           }
+        public record Bank
+        {
+          public int AccountNum {get; init; }
+          public string AccountName {get; init;}
+          public Person(int num, string name) => (num, name) = (AccountNum, AccountNum);
+        }
+    ..
+
+In this example, a Book type is created with two read-only properties
+``AccountNum`` and ``AccountName``. The properties cannot be modified once it is
+created which makes it immutable. To update a record, an existing object can be
+copied and a new object can be created. Inheritance is supported by Records by
+the following code:
+
+    .. code-block:: python
+
+        public record SavingsAccount : Account
+        {
+          public int InterestRate { get; init}
+          public SavingsAccount(int num, string name, int interest) : base
+            (num, name) => InterestRate = interest;
         }
 
+
     ..
 
-  * Python - include sample code to compare Hello World
+When a record type is defined, the compiler incorporates several other
+methods: [#f8]_
+
+  * Methods for value-baed equality comparisons
+  * Override for ``GetHashCode``
+  * ``Copy`` and ``Clone`` members
+  * ``PrintMembers`` and ``ToString``
+  * ``Deconstruct`` method
+
+With record notion, objects are more like values and classes are enhanced to
+have value like behavior rather than encapsulated identified entity. [#f9]_
+Expressing record objects that are strings are easier. A record that is a
+string type can be expressed using the following code to print out all its
+attributes.
+
+  .. code-block:: python
+
+    Console.WriteLine(person);
+  ..
+
+Init-only Setters
+~~~~~~~~~~~~~~~~~
+
+C# 9.0 allows you to create ``init`` accessors instead of ``set`` accessors.
+This is like records where once it is set, the properties are read-only.
+
+Example: [#f8]_
 
     .. code-block:: python
 
-        print("Hello, World!)
+       public struct Point
+       {
+         public double X {get; init;}
+         public double Y {get; init;}
+         public double Distance => Math.Sqrt(X * X + Y * Y);
+       }
 
     ..
 
-  * C ++
+This example code can be initialized, but then cannot be modified until the
+program has been run and completed.
 
+    .. code-block:: python
+
+       var pt = new Point { X = 3, Y = 4};
+       // pt.X = 7; this would fail
+       Console.WriteLine(pt.Distance);
+
+    ..
+
+
+Comparing C# to Other Languages
+"""""""""""""""""""""""""""""""
+
+C# was developed based with similar characteristics to Java in its first
+release. Consider the following "Hello world!" example to see how the current
+version of C# compares to other coding languages.
+
+C#
+~~
     .. code-block:: python
 
         #include <iostream>
@@ -334,8 +493,30 @@ of an impact as the ``async`` and ``await`` concepts.
 
     ..
 
-  * C
+Java
+~~~~
 
+    .. code-block:: python
+
+        class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+           }
+        }
+
+    ..
+
+Python
+~~~~~~
+
+    .. code-block:: python
+
+        print("Hello, World!)
+
+    ..
+
+C
+~
     .. code-block:: python
 
         #include <stdio.h>
@@ -347,35 +528,17 @@ of an impact as the ``async`` and ``await`` concepts.
 
     ..
 
-  * Another point??
 
+C# in Today's World
+"""""""""""""""""""
 
+C# is one of the top programming languages in the world today. As of 2017, 31%
+of all developers were using C# regularly [#f2]_ and it is ranked 5th on the
+Tiobe index behind C, Java, Python, and C++. [#f1]_
 
-
-* Conclusion - C# in today's world
-
-  * How often is C# being used?
-
-    * As of 2017, 31% of all developers were using C# regularly [#f2]_
-
-  * Are there jobs available?
-
-    * C# in the United States - 49,697 Results on Linkedin
-    * possibly include screenshot of search results
-
-  * Tiobe index
-
-    * C# is ranked 5th on the Tiobe index behind C, Java, Python, and C++
-    * 4.44% in ratings
-    * Same ranking as January and this time last year [#f1]_
-
-  * StackOverflow
-
-    * 1,466,151 questions asked
-    * #4 in top tags [#f7]_
-    * StackOverflow was built in C#
-
-  * Companies that use C# [#f3]_
+StackOverflow, a popular website for coding help, was built in C#. It also marks
+C# as #4 in top tags and has over 1,466,151 questions asked. [#f7]_ Other
+companies that use C# include: [#f3]_
 
     * JPMorgan Chase
     * FM Global
@@ -383,12 +546,25 @@ of an impact as the ``async`` and ``await`` concepts.
     * MUFG
     * Fiserv
 
+Being one of the top languages, there are also thousands of job applications
+that include the C# keyword in their job description on LinkedIn.
+
+  .. image:: jobSearchResults.png
+    :width: 500
+
+  ..
+
+The possibilities of C# are endless. The language will continue to evolve as the
+years go on and will remain prevalent in the coding world. Whether looking to
+learn a new coding language or looking for a new job, C# shows opportunities
+for people who are interested.
+
+
 
 .. [#f1] C# Programming Language. TIOBE - The Software Quality Company.
          https://www.tiobe.com/tiobe-index/csharp/
 .. [#f2] Everything you need to know about C#. Pluralsight.
          https://www.pluralsight.com/blog/software-development/everything-you-need-to-know-about-c-
-
 .. [#f3] HG Insights (2021, March 2). Companies Using C#, Market Share,
          Customers and Competitors. https://discovery.hgdata.com/product/c-sharp
 .. [#f4] Microsoft Contributors (2020, April 8). The History of C#. Microsoft.
