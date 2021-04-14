@@ -1,15 +1,15 @@
-C# First Draft
-==============
-
 History of C#
--------------
+=============
 
-Overview
-""""""""
 C# was created by Microsoft. It was first developed in 2000 by Anders Hejlsberg
-as a rival to Java because the creators of Java did not want Microsoft
-to make changes to their programming language. [#f5]_ Microsoft's new language
-would be a new runner for the top coding language used by programmers.
+as a rival to Sun Microsystem's Java programming language. Microsoft had their
+own implementation of Java. They tried to add language features to Java and Sun
+said no. [#f5]_ Microsoft decided to abandon their Java product and create their own
+which became known as C#. Understanding C# and its history to determine relevance
+in today's world compared to other languages.
+
+Microsoft's new language would go on to become one of the top languages used
+by programmers.
 
     "One of the key differences between C# and these other languages,
     particularly Java, is that we tried to stay much closer to C++ in our
@@ -18,17 +18,21 @@ would be a new runner for the top coding language used by programmers.
     design goals was to make the C# language component-oriented, to add to the
     language itself all of the concepts that you need when you write components.
     Concepts such as properties, methods, events, attributes, and documentation
-    are all first-class language constructs." (page 54 from creator) [#f6]_
+    are all first-class language constructs." [#f6]_
 
 A key factor of C# is that it is strongly, dynamically typed. Being a strong
 typed language means that any attempt to pass a wrong kind of parameter as an
-argument, or assigning the wrong value, will generate a compilation error. [#f6]_
-The graphic below shows that JavaScript and C++ are some of the weaker types
+argument will generate a compilation error. [#f6]_ For example, declaring an
+integer and passing a string value such as "coding" will error. The graphic
+below shows that JavaScript and C++ are some of the weaker typed
 languages.
 
-  .. image:: dynamicStrong.png
+  .. figure:: dynamicStrong.png
     :width: 500
     :align: center
+
+    This figure shows whether programmign languages are dynamic or static and
+    strong or weak. [#f6]_
   ..
 
 Dynamic means that rules are applied at runtime, compared to static languages
@@ -38,28 +42,29 @@ are more dynamic than C#, but C# is more dynamic than Scala or C++.
 C# is used for website development, applications, and games. The following are
 examples of programs, applications, and games written in C#: [#f2]_
 
-    * Microsoft Visual Studio
-    * Paint.NET
-    * Open Dental
-    * KeePass
-    * Banshee
-    * FlashDevelop
+    * Microsoft Visual Studio - a development environment from Microsoft
+    * Paint.NET - a graphics editor program for Microsoft Windows, developed
+      on the .NET framework
+    * Open Dental - dental practice management software written in C#
+    * KeePass - a password safe primarily for Windows, built in C# and C++
+    * Banshee - cross-platform media player written in C# and GTK
+    * FlashDevelop - a development environment for development of Adobe Flash
+      websites, web and desktop applications, and video games
 
-To get to the advance steps of creating an application or game, it is
+To get to the advanced steps of creating an application or game, it is
 important to start with the basics and learn the fundamentals of the
-programming language. Understanding C# and its history to determine relevance
-in today's world compared to other languages.
-
+programming language.
 C# 1.0
 """"""
 
 C# 1.0 was the first release of a new object-oriented language made by
-Microsoft. There were a lot of similarities to Java. "As part of its
-stated design goals, it sought to be a 'simple, modern, general-purpose object
+Microsoft in 2002. There were a lot of similarities to Java. "As part of its
+stated design goals, it sought to be a 'simple, modern, general-purpose object-
 oriented language.'" [#f4]_
 
-This new software started out as only compatible
-with Windows products. Within this first release, the major C# features were:
+This new software originally only ran on Microsoft Windows, and only created
+programs that ran on MS Windows. Within this first release, the major C#
+features were:
 classes, structs, interfaces, events, properties, delegates, operators and
 expressions, statements, and attributes. Several key features that are used in
 programming today, such as generics and LINQ, were not yet utilized in this
@@ -73,10 +78,10 @@ included new features and added improvements to existing features changing the
 generic object-oriented language. "The first actual fundamental change that
 took place in the language was the incorporation of Generics." [#f6]_ Generics
 allows for code to be reused. For example, a ``List<T>`` is a generic
-List that can then be used for Ints or if the programmer changes
-their mind, it can be used as a List of strings. Programmers can change what
-is in the list without going back and changing the list type where it was first
-defined. The namespace ``System.Collection.Generic`` supports this feature.
+list class that could be used to create a list of integers, and also used to
+create a list of strings. Without generics, programmers would need a list class
+for every data type. The namespace ``System.Collection.Generic`` supports
+this feature.
 
 Another important feature in this release was iterators. "Iterators let you
 examine all the items in a List \(or other Enumerable types\) with a foreach
@@ -312,7 +317,6 @@ included in each version.
     * additional generic constraints
 
 
-
 C# 8.0
 """"""
 
@@ -327,20 +331,10 @@ the new features and enhancements to the language:
   * Stackalloc in nested expressions
 
 
-
-  * C# 8.0
-
-    * First major C# release that specifically targets .NET Core
-    * Major Features
-    * Default interface members require enhancements in the CLR
-    * .NET Core Libraries
-
-* Major Point 3 - Current Version of C# - 9.0 (references for step 3 [#f8]_ [#f9]_)
-
 C# 9.0
 """"""
 
-The newest version of C# is 9.0. It was released on ______ and relies on and is
+The newest version of C# is 9.0. It was released in 2020 and relies on and is
 only compatible with .NET 5. "C# 9.0 focuses on features that support native
 cloud applications, modern software engineering practices, and more concise
 readable code. The biggest new features within this release are:
@@ -356,7 +350,7 @@ Top-level Statements
 Top-level statements was included in this release to reduce irrelevant code.
 The previous version of a simple "Hello world!" program would be the following: [#f8]_
 
-    .. code-block:: python
+    .. code-block:: c#
 
             using System;
             namespace HelloWorld
@@ -376,7 +370,7 @@ The previous version of a simple "Hello world!" program would be the following: 
 With the new release, this code would be simplified to:
 
 
-    .. code-block:: python
+    .. code-block:: c#
 
         using System;
         Console.WriteLine("Hello World!");
@@ -394,7 +388,7 @@ Record Types
 Records provide a type declaration for an immutable reference type that uses
 value semantics for equality. [#f8]_
 
-    .. code-block:: python
+    .. code-block:: c#
 
         public record Bank
         {
@@ -410,7 +404,7 @@ created which makes it immutable. To update a record, an existing object can be
 copied and a new object can be created. Inheritance is supported by Records by
 the following code:
 
-    .. code-block:: python
+    .. code-block:: c#
 
         public record SavingsAccount : Account
         {
@@ -437,7 +431,7 @@ Expressing record objects that are strings are easier. A record that is a
 string type can be expressed using the following code to print out all its
 attributes.
 
-  .. code-block:: python
+  .. code-block:: c#
 
     Console.WriteLine(person);
   ..
@@ -450,7 +444,7 @@ This is like records where once it is set, the properties are read-only.
 
 Example: [#f8]_
 
-    .. code-block:: python
+    .. code-block:: c#
 
        public struct Point
        {
@@ -464,7 +458,7 @@ Example: [#f8]_
 This example code can be initialized, but then cannot be modified until the
 program has been run and completed.
 
-    .. code-block:: python
+    .. code-block:: c#
 
        var pt = new Point { X = 3, Y = 4};
        // pt.X = 7; this would fail
@@ -482,21 +476,26 @@ version of C# compares to other coding languages.
 
 C#
 ~~
-    .. code-block:: python
 
-        #include <iostream>
+    .. code-block:: C#
 
-        int main() {
-        std::cout << "Hello World!";
-        return 0;
-        }
+       namespace HelloWorld
+       {
+         class Hello {
+            static void Main(string[] args)
+            {
+              System.Console.WriteLine("Hello World!");
+            }
+         }
+       }
 
     ..
+
 
 Java
 ~~~~
 
-    .. code-block:: python
+    .. code-block:: java
 
         class HelloWorld {
         public static void main(String[] args) {
@@ -517,7 +516,7 @@ Python
 
 C
 ~
-    .. code-block:: python
+    .. code-block:: c
 
         #include <stdio.h>
         int main() {
@@ -571,13 +570,8 @@ for people who are interested.
          https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history
 .. [#f5] Mkhitaryan, Armina. (2017, October 13). Why is C# Among The Most
          Popular Programming Languages in The World? Medium.
-         https://medium.com/sololearn/why-is-c-among-the-most-popular-programmin
-         g-languages-in-the-world-ccf26824ffcb#:~:text=C%23%20is%20an%20In%2DDem
-         and%20Skill&text=Today%2C%20it%20is%20the%204th,more%20than%201.1%20million%20topics.
 .. [#f6] Posadas, Marino (2016). Mastering C# and .NET Framework. Packt
-         Publishing. http://simpson.idm.oclc.org/login?url=https://search.ebsco
-         host.com/login.aspx?direct=true&db=nlebk&AN=1440572&site=ehost-live&sc
-         ope=site&ebv=EB&ppid=pp_Cover
+         Publishing.
 .. [#f7] Tags. (n.d.). Stack Overflow. https://stackoverflow.com/tags
 .. [#f8] Wagner, Bill (2020). Introducing C# 9.0. CODE Focus Magazine.
             https://www.codemag.com/Article/2010032/Introducing-C
