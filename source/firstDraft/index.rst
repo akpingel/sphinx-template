@@ -5,8 +5,8 @@ C# was created by Microsoft. It was first developed in 2000 by Anders Hejlsberg
 as a rival to Sun Microsystem's Java programming language. Microsoft had their
 own implementation of Java. They tried to add language features to Java and Sun
 said no. [#f5]_ Microsoft decided to abandon their Java product and create their own
-which became known as C#. Understanding C# and its history to determine relevance
-in today's world compared to other languages.
+which became known as C#. Understanding C# and its history helps determine its
+relevance in today's world compared to other languages.
 
 Microsoft's new language would go on to become one of the top languages used
 by programmers.
@@ -28,12 +28,11 @@ below shows that JavaScript and C++ are some of the weaker typed
 languages.
 
   .. figure:: dynamicStrong.png
-    :width: 500
+    :width: 75%
     :align: center
 
-    This figure shows whether programmign languages are dynamic or static and
+    This figure shows whether programming languages are dynamic or static and
     strong or weak. [#f6]_
-  ..
 
 Dynamic means that rules are applied at runtime, compared to static languages
 that apply their rules at compile time. [#f6]_ In the figure, Python and Clojure
@@ -122,26 +121,25 @@ SQL operations using C# syntax. These SQL-style queries are beneficial to
 perform on collections. The following is an example using LINQ: [#f6]_
 
   .. code-block:: c#
+     :linenos:
 
-    // generate a few numbers
-    var numbers = Enumerable.Range(50, 200);
-    // use of LINQ to filter
-    var selected = from n in numbers
-      where n % 3 == 0 && n % 7 == 0
-      select n;
-    Console.WriteLine("Numbers divisible by 3 and 7 \n\r");
-    // Now we use a lambda (Action) to print out results
-    selected.ToList().ForEach(n => Console.WriteLine("Selected: {0} ", n));
+      // generate a few numbers
+      var numbers = Enumerable.Range(50, 200);
+      // use of LINQ to filter
+      var selected = from n in numbers
+        where n % 3 == 0 && n % 7 == 0
+        select n;
+      Console.WriteLine("Numbers divisible by 3 and 7 \n\r");
+      // Now we use a lambda (Action) to print out results
+      selected.ToList().ForEach(n => Console.WriteLine("Selected: {0} ", n));
 
-  ..
+If you were to run the above sample code, the following would be printed to the
+console: [#f6]_
 
-Output: [#f6]_
-
-  .. image:: linq_output.png
+  .. figure:: linq_output.png
     :width: 300
 
-  ..
-
+    Output of LINQ sample code.
 
 The features included in this released help label C# as a respected programming
 language. [#f4]_
@@ -178,34 +176,31 @@ looks for the word ``await``.
 Sample: [#f6]_
 
   .. code-block:: c#
+    :linenos:
 
-    static void Main(string[] args)
-    {
-      Console.WriteLine("SlowMethod started at...{0}",
-        DateTime.Now.ToLongTimeString());
-      SlowMethod();
-      Console.WriteLine("Awaiting for SlowMethod...");
-      Console.ReadLine();
-    }
-    static async Task SlowMethod()
-    {
-      // Simulation of slow method "Sleeping" the thread for 3 secs.
-      await Task.Run(new Action(() => System.Threading.Thread.Sleep(3000)));
-      Console.WriteLine("Finished at: {0}",
-        DateTime.Now.ToLongTimeString());
-      return;
-    }
-
-  ..
-
+      static void Main(string[] args)
+      {
+        Console.WriteLine("SlowMethod started at...{0}",
+          DateTime.Now.ToLongTimeString());
+        SlowMethod();
+        Console.WriteLine("Awaiting for SlowMethod...");
+        Console.ReadLine();
+      }
+      static async Task SlowMethod()
+      {
+        // Simulation of slow method "Sleeping" the thread for 3 secs.
+        await Task.Run(new Action(() => System.Threading.Thread.Sleep(3000)));
+        Console.WriteLine("Finished at: {0}",
+          DateTime.Now.ToLongTimeString());
+        return;
+      }
 
 Output: [#f6]_
 
-  .. image:: awaitOutput.png
-    :width: 300
+  .. figure:: awaitOutput.png
+    :width: 75%
 
-  ..
-
+    Output of ``await`` function code.
 
 Another smaller part of this release was caller info attributes. This
 enhancement is beneficial for diagnostics and logging, but didn't have as big
@@ -252,27 +247,21 @@ definition. [#f6]_
 
     (int n, string s) = ( 8, "coding" );
 
-  ..
-
-
 Function sample: [#f6]_
 
-
   .. code-block:: c#
+    :linenos:
 
-    static (int sum, int count) ProcessArray(List numbers)
-    {
-      var result = (sum:0 , count:0);
-      numbers.ForEach(n =>
+      static (int sum, int count) ProcessArray(List numbers)
       {
-        result.count++;
-        result.sum += n;
-      });
-      return result;
-    }
-
-  ..
-
+        var result = (sum:0 , count:0);
+        numbers.ForEach(n =>
+        {
+          result.count++;
+          result.sum += n;
+        });
+        return result;
+      }
 
 For this function, the return valid is a tuple. This allows a sum of numbers
 and the count of the numbers being added to be calculated.
@@ -290,8 +279,6 @@ decomposing a DateTime Value declaration would look like this: [#f6]_
       minute = dt.Minute;
       second = dt.Second;
     }
-
-  ..
 
 The following are point releases and the new features and enhancements
 included in each version.
@@ -316,7 +303,6 @@ included in each version.
     * fixed statements can be used with any type that supports a pattern
     * additional generic constraints
 
-
 C# 8.0
 """"""
 
@@ -329,7 +315,6 @@ the new features and enhancements to the language:
   * Pattern matching enhancements
   * Nullable reference types
   * Stackalloc in nested expressions
-
 
 C# 9.0
 """"""
@@ -350,32 +335,27 @@ Top-level Statements
 Top-level statements was included in this release to reduce irrelevant code.
 The previous version of a simple "Hello world!" program would be the following: [#f8]_
 
-    .. code-block:: c#
+  .. code-block:: c#
+    :linenos:
 
-            using System;
-            namespace HelloWorld
-            {
-                class Program
-                {
-                    static void Main(string[] args)
-                    {
-                        Console.WriteLine("Hello World!");
-                    }
-                }
-            }
-
-        ..
-
+      using System;
+      namespace HelloWorld
+      {
+        class Program
+        {
+          static void Main(string[] args)
+          {
+            Console.WriteLine("Hello World!");
+          }
+        }
+      }
 
 With the new release, this code would be simplified to:
 
+  .. code-block:: c#
 
-    .. code-block:: c#
-
-        using System;
-        Console.WriteLine("Hello World!");
-
-    ..
+    using System;
+    Console.WriteLine("Hello World!");
 
 Only code that performs that action required is necessary with the new top-level
 statements that replace the ``Main`` function in programs. Like the ``Main``
@@ -388,15 +368,16 @@ Record Types
 Records provide a type declaration for an immutable reference type that uses
 value semantics for equality. [#f8]_
 
-    .. code-block:: c#
+  .. code-block:: c#
+    :linenos:
+    :emphasize-lines: 5
 
-        public record Bank
-        {
-          public int AccountNum {get; init; }
-          public string AccountName {get; init;}
-          public Person(int num, string name) => (num, name) = (AccountNum, AccountNum);
-        }
-    ..
+       public record Bank
+       {
+         public int AccountNum {get; init; }
+         public string AccountName {get; init;}
+         public Person(int num, string name) => (num, name) = (AccountNum, AccountNum);
+       }
 
 In this example, a Book type is created with two read-only properties
 ``AccountNum`` and ``AccountName``. The properties cannot be modified once it is
@@ -404,17 +385,16 @@ created which makes it immutable. To update a record, an existing object can be
 copied and a new object can be created. Inheritance is supported by Records by
 the following code:
 
-    .. code-block:: c#
+  .. code-block:: c#
+    :linenos:
+    :emphasize-lines: 1,4,5
 
-        public record SavingsAccount : Account
-        {
-          public int InterestRate { get; init}
-          public SavingsAccount(int num, string name, int interest) : base
-            (num, name) => InterestRate = interest;
-        }
-
-
-    ..
+      public record SavingsAccount : Account
+      {
+        public int InterestRate { get; init}
+        public SavingsAccount(int num, string name, int interest) : base
+          (num, name) => InterestRate = interest;
+      }
 
 When a record type is defined, the compiler incorporates several other
 methods: [#f8]_
@@ -434,7 +414,6 @@ attributes.
   .. code-block:: c#
 
     Console.WriteLine(person);
-  ..
 
 Init-only Setters
 ~~~~~~~~~~~~~~~~~
@@ -444,27 +423,26 @@ This is like records where once it is set, the properties are read-only.
 
 Example: [#f8]_
 
-    .. code-block:: c#
+  .. code-block:: c#
+    :linenos:
+    :emphasize-lines: 3,4
 
-       public struct Point
-       {
-         public double X {get; init;}
-         public double Y {get; init;}
-         public double Distance => Math.Sqrt(X * X + Y * Y);
-       }
-
-    ..
+      public struct Point
+      {
+        public double X {get; init;}
+        public double Y {get; init;}
+        public double Distance => Math.Sqrt(X * X + Y * Y);
+      }
 
 This example code can be initialized, but then cannot be modified until the
 program has been run and completed.
 
-    .. code-block:: c#
+  .. code-block:: c#
+    :linenos:
 
-       var pt = new Point { X = 3, Y = 4};
-       // pt.X = 7; this would fail
-       Console.WriteLine(pt.Distance);
-
-    ..
+      var pt = new Point { X = 3, Y = 4};
+      // pt.X = 7; this would fail
+      Console.WriteLine(pt.Distance);
 
 
 Comparing C# to Other Languages
@@ -477,59 +455,53 @@ version of C# compares to other coding languages.
 C#
 ~~
 
-    .. code-block:: C#
+  .. code-block:: C#
+    :linenos:
 
-       namespace HelloWorld
-       {
-         class Hello {
-            static void Main(string[] args)
-            {
-              System.Console.WriteLine("Hello World!");
-            }
-         }
-       }
-
-    ..
-
+      namespace HelloWorld
+      {
+        class Hello {
+          static void Main(string[] args)
+          {
+            System.Console.WriteLine("Hello World!");
+          }
+        }
+      }
 
 Java
 ~~~~
 
-    .. code-block:: java
+  .. code-block:: java
+    :linenos:
 
-        class HelloWorld {
+      class HelloWorld {
         public static void main(String[] args) {
-            System.out.println("Hello, World!");
-           }
+          System.out.println("Hello, World!");
         }
-
-    ..
+      }
 
 Python
 ~~~~~~
 
-    .. code-block:: python
+  .. code-block:: python
+    :linenos:
 
-        print("Hello, World!)
-
-    ..
+      print("Hello, World!)
 
 C
 ~
-    .. code-block:: c
+  .. code-block:: c
+    :linenos:
 
-        #include <stdio.h>
-        int main() {
-           // printf() displays the string inside quotation
-           printf("Hello, World!");
-           return 0;
-        }
+      #include <stdio.h>
+      int main() {
+        // printf() displays the string inside quotation
+        printf("Hello, World!");
+        return 0;
+      }
 
-    ..
-
-
-C# in Today's World
-"""""""""""""""""""
+Modern C#
+"""""""""
 
 C# is one of the top programming languages in the world today. As of 2017, 31%
 of all developers were using C# regularly [#f2]_ and it is ranked 5th on the
@@ -548,9 +520,10 @@ companies that use C# include: [#f3]_
 Being one of the top languages, there are also thousands of job applications
 that include the C# keyword in their job description on LinkedIn.
 
-  .. image:: jobSearchResults.png
-    :width: 500
+  .. figure:: jobSearchResults.png
+    :width: 75%
 
+    Figure taken from LinkenIn search results.
   ..
 
 The possibilities of C# are endless. The language will continue to evolve as the
