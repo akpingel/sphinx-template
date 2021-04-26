@@ -2,11 +2,11 @@ History of C#
 =============
 
 C# was created by Microsoft. It was first developed in 2000 by Anders Hejlsberg
-as a rival to Sun Microsystem's Java programming language. Microsoft had their
+as a rival to Sun Microsystem's Java programming language. Microsoft had its
 own implementation of Java. They tried to add language features to Java and Sun
-said, "no". [#f5]_ Microsoft decided to abandon their Java product and create their own
-which became known as C#. Understanding C# and its history helps determine its
-relevance in today's world compared to other languages.
+said, "no". [#f5]_ Microsoft decided to abandon their Java product and create
+their own, which became known as C#. Understanding C# and its history helps
+determine its relevance in today's world compared to other languages.
 
 Microsoft's new language would go on to become one of the top languages used
 by programmers.
@@ -21,7 +21,7 @@ by programmers.
     are all first-class language constructs," said Anders Hejlsberg, founder
     of Microsoft. [#f6]_
 
-A key factor of C# is that it is strongly, dynamically typed. Being a strong
+A key factor of C# is that it is strongly, dynamically typed. Being a strongly
 typed language means that any attempt to pass a wrong kind of parameter as an
 argument will generate a compilation error. [#f6]_ For example, declaring an
 integer and passing a string value such as "coding" will error. The graphic
@@ -48,12 +48,12 @@ examples of programs, applications, and games written in C#: [#f2]_
     * Open Dental - dental practice management software written in C#
     * KeePass - a password safe primarily for Windows, built in C# and C++
     * Banshee - cross-platform media player written in C# and GTK
-    * FlashDevelop - a development environment for development of Adobe Flash
-      websites, web and desktop applications, and video games
+    * FlashDevelop - a development environment for the development of Adobe
+      Flash websites, web and desktop applications, and video games
 
 To get to the advanced steps of creating an application or game, it is
-important to start with the basics and learn the fundamentals of the
-programming language.
+important to start with the basics and learn the programming language
+fundamentals.
 
 C# 1.0
 """"""
@@ -63,13 +63,12 @@ Microsoft in 2002. There were a lot of similarities to Java. "As part of its
 stated design goals, it sought to be a 'simple, modern, general-purpose object-
 oriented language.'" [#f4]_
 
-This new software originally only ran on Microsoft Windows, and only created
+This new software originally only ran on Microsoft Windows and only created
 programs that ran on MS Windows. Within this first release, the major C#
-features were:
-classes, structs, interfaces, events, properties, delegates, operators and
-expressions, statements, and attributes. Several key features that are used in
-programming today, such as generics and LINQ, were not yet utilized in this
-development language, but would be developed later on.
+features were: classes, structs, interfaces, events, properties, delegates,
+operators and expressions, statements, and attributes. Several key elements
+used in programming today, such as generics and LINQ, were not yet utilized
+in this development language but would be developed later on.
 
 C# 2.0
 """"""
@@ -79,35 +78,34 @@ included new features and added improvements to existing features changing the
 generic object-oriented language. "The first actual fundamental change that
 took place in the language was the incorporation of Generics." [#f6]_ Generics
 allows for code to be reused. For example, a ``List<T>`` is a generic
-list class that could be used to create a list of integers, and also used to
-create a list of strings. Without generics, programmers would need a list class
-for every data type. The namespace ``System.Collection.Generic`` supports
-this feature.
+list class that could create a list of integers or create a list of strings.
+Without generics, programmers would need a list class for every data type. The
+namespace ``System.Collection.Generic`` supports this feature.
 
 Another important feature in this release was iterators. "Iterators let you
 examine all the items in a List \(or other Enumerable types\) with a foreach
 loop. Having iterators as a first-class part of the language dramatically
 enhanced readability of the language and people's ability to reason about the
-code."  [#f4]_ C# still wasn't up to the capabilities of the Java language,
-however, the new added features helped it attempt to catch up to current
+code." [#f4]_ C# still wasn't up to the capabilities of the Java language,
+however, the newly added features helped its attempt to catch up to current
 popular programming languages.
 
 C# 3.0
 """"""
 
 A major milestone of C# was in the 3.0 release in 2007 due to its establishment
-of Lambda expressions, anonymous types and LINQ. Anonymous types allows objects
+of Lambda expressions, anonymous types, and LINQ. Anonymous types allow objects
 to be invoked with a new operator ``var``. This operator doesn't declare if the
 object is an Int, String, Boolean, or an object of a class. This type is useful
 when the programmer doesn't want all fields to be required. [#f6]_ For example,
 for a person object, you might have their name and age, but not their date of
-birth, so using an anonymous type allows you to not fill in that field, but
+birth, so using an anonymous type allows you to not fill in that field but
 still have access to the methods, such as get_Age and get_Name.
 
 Lambda expressions are anonymous functions, which is similar to Javascript in
 style. The lambda operator ``=>`` divides the defined function into two parts:
 the arguments to the left and the body to the right. [#f6]_ For example: if you
-wanted to find if a number is divisible by 2 or 3 you could use the following
+wanted to find if a number is divisible by 2 or 3, you could use the following
 lambda expression:
 
   .. code-block:: c#
@@ -148,9 +146,8 @@ language. [#f4]_
 C# 4.0
 """"""
 
-The next release of C# in 2010, version 4.0 had some new
-features, but none that compared to the previous release. The following
-were included in this release: [#f6]_
+The next release of C# in 2010, version 4.0, had some new features, but none
+compared to the previous release. The following was included in this release: [#f6]_
 
  * Dynamic Binding
  * Named/optional arguments
@@ -161,20 +158,20 @@ Additionally, the dynamic keyword was introduced. "By using the dynamic keyword,
 you can create constructs similar to dynamically typed languages like
 JavaScript." [#f4]_  This means that you could create dynamic x = "a string" and
 then add six to it and not have a compiler error because dynamic is assumed to
-support any operation. Errors that occur from using the keyword dynamic will
-be caught from the runtime and throw a runtime exception.
+support any operation. Errors from using the keyword dynamic will be caught from
+the runtime and throw a runtime exception.
 
 C# 5.0
 """"""
 
-C# 5.0 was released with Visual Studio 2012. The two main purposes of this
+C# 5.0 was released with Visual Studio 2012. The two primary purposes of this
 release were to incorporate ``async`` and ``await`` concepts for asynchronous
 programming. "When these features came out in 2012, C# changed the game again
 by baking asynchrony into the language as a first-class participant." [#f4]_
 These two words go hand in hand. When the compiler sees the word ``async``, it
 looks for the word ``await``.
 
-Sample: [#f6]_
+The following is a sample of a function using ``async`` and ``await``: [#f6]_
 
   .. code-block:: c#
     :linenos:
@@ -197,7 +194,7 @@ Sample: [#f6]_
         return;
       }
 
-Output: [#f6]_
+The following figure is the output of the function above: [#f6]_
 
   .. figure:: awaitOutput.png
     :width: 75%
@@ -205,16 +202,16 @@ Output: [#f6]_
     Output of function using ``async`` and ``await``.
 
 Another smaller part of this release was caller info attributes. This
-enhancement is beneficial for diagnostics and logging, but didn't have as big
+enhancement is beneficial for diagnostics and logging but didn't have as big
 of an impact as the ``async`` and ``await`` concepts.
 
 C# 6.0
 """"""
 
 C# 6.0 was released with Visual Studio 2015. This release focused on smaller
-aspects of the language rather than adding major new features. This allowed
-the language to be more productive and make the code more readable. Additional
-features include:
+aspects of the language rather than adding significant new features. This
+allowed the language to be more productive and make the code more readable.
+Additional features include:
 
   * String interpolation
   * Exception filters
@@ -225,13 +222,13 @@ features include:
   * Expression bodied methods
   * Index initializer
 
-Exception filters allows successful code to continue to run, and failed code
+Exception filters allow successful code to continue to run, and failed code
 will throw an error message to tell you why the code won't work instead of
-failing your program. You can also utilize to to do something else when the
-failed code occurs.
+failing your program. The catch clause is utilized to do something else
+when the failed code occurs.
 
-This version release included Roslyn the compiler as a service which was written
-in C#. [#f4]_ A compiler in the same language as your code allows new benefits
+This version release included Roslyn the compiler, a service written in C#. [#f4]_
+A compiler in the same language as your code allows new benefits
 in the IDE for editing and compiling your code.
 
 C# 7.0
@@ -239,7 +236,7 @@ C# 7.0
 
 C# 7.0 was released with Visual Studio 2017. The most important features of
 this release include new support for tuples and deconstructions. Declaring tuples
-using the ``Tuple`` Class is not needed anymore. Pattern matching allows the
+using the tuple class is not needed anymore. Pattern matching allows the
 compiler to handle declarations that include a tuple syntax next to a var
 definition. [#f6]_
 
@@ -264,7 +261,7 @@ The following is a sample of code that uses the new tuple syntax: [#f6]_
       }
 
 For this function, the return value is a tuple. This allows a sum of numbers
-and the count of the numbers that's being added to be calculated.
+and the count of the numbers that are being added to be calculated.
 
 Deconstruction allows us to deconstruct/decompose an object into parts. The
 ``Deconstruct`` method must be defined to deconstruct and object. For example,
@@ -305,7 +302,7 @@ included in each version.
 C# 8.0
 """"""
 
-C# 8.0 targets .NET Core. Some features rely on new CLR capabilities, other on
+C# 8.0 targets .NET Core. Some features rely on new CLR capabilities, others on
 library types added only in .NET Core C#. [#f4]_ The following are some of
 the new features and enhancements to the language:
 
@@ -318,10 +315,10 @@ the new features and enhancements to the language:
 C# 9.0
 """"""
 
-The newest version of C# is 9.0 was released in 2020. It is
-only compatible with .NET 5. "C# 9.0 focuses on features that support native
-cloud applications, modern software engineering practices, and more concise
-readable code. The biggest new features within this release are:
+The newest version of C# is 9.0 was released in 2020. It is only compatible with
+.NET 5. "C# 9.0 focuses on features that support native cloud applications,
+modern software engineering practices, and more concise readable code. The
+biggest new features within this release are:
 
   * Top-level statements
   * Record types
@@ -331,7 +328,8 @@ readable code. The biggest new features within this release are:
 
 Top-level Statements
 ~~~~~~~~~~~~~~~~~~~~
-Top-level statements was included in this release to reduce irrelevant code.
+
+Top-level statements were included in this release to reduce irrelevant code.
 The previous version of a simple "Hello world!" program would be the following: [#f8]_
 
   .. code-block:: c#
@@ -349,7 +347,7 @@ The previous version of a simple "Hello world!" program would be the following: 
         }
       }
 
-With the new release, this code would be simplified to:
+With the new release, the above code would be simplified to the following:
 
   .. code-block:: c#
 
@@ -365,7 +363,8 @@ Record Types
 ~~~~~~~~~~~~
 
 Records provide a type declaration for an immutable reference type that uses
-value semantics for equality. [#f8]_
+value semantics for equality. [#f8]_ Value semantics are a variable that
+contains an instance of the type. The following is an example using record types:
 
   .. code-block:: c#
     :linenos:
@@ -381,8 +380,8 @@ value semantics for equality. [#f8]_
 In this example, a Book type is created with two read-only properties
 ``AccountNum`` and ``AccountName``. The properties cannot be modified once it is
 created which makes it immutable. To update a record, an existing object can be
-copied and a new object can be created. Inheritance is supported by Records by
-the following code:
+copied, and a new object can be created. Record supporting inheritance is shown
+by the following code:
 
   .. code-block:: c#
     :linenos:
@@ -404,9 +403,9 @@ methods: [#f8]_
   * ``PrintMembers`` and ``ToString``
   * ``Deconstruct`` method
 
-With record notion, objects are more like values and classes are enhanced to
-have value like behavior rather than encapsulated identified entity. [#f9]_
-Expressing record objects that are strings is easier. A record that is a
+With record notion, objects are more like values, and classes are enhanced to
+have value-like behavior rather than encapsulated identified entity. [#f9]_
+Expressing record objects that are strings is easier. A record with a
 string type can be expressed using the following code to print out all its
 attributes.
 
@@ -420,7 +419,7 @@ Init-only Setters
 C# 9.0 allows you to create ``init`` accessors instead of ``set`` accessors.
 This is like records where once it is set, the properties are read-only.
 
-Example: [#f8]_
+The following is sample code using ``init`` accessors: [#f8]_
 
   .. code-block:: c#
     :linenos:
@@ -448,24 +447,17 @@ Comparing C# to Other Languages
 """""""""""""""""""""""""""""""
 
 C# was developed based with similar characteristics to Java in its first
-release. Consider the following "Hello world!" example to see how the current
+release. Consider the following "Hello world!" examples to see how the current
 version of C# compares to other coding languages.
 
-C#
-~~
+C# 9.0
+~~~~~~
 
   .. code-block:: C#
     :linenos:
 
-      namespace HelloWorld
-      {
-        class Hello {
-          static void Main(string[] args)
-          {
-            System.Console.WriteLine("Hello World!");
-          }
-        }
-      }
+    using System;
+    Console.WriteLine("Hello World!");
 
 Java
 ~~~~
@@ -499,11 +491,24 @@ C
         return 0;
       }
 
+C++
+~~~
+  .. code-block:: c
+    :linenos:
+
+      #include <iostream>
+
+      int main()
+      {
+        std::cout << "Hello World!";
+        return 0;
+      }
+
 Modern C#
 """""""""
 
 C# is one of the top programming languages in the world today. As of 2017, 31%
-of all developers were using C# regularly [#f2]_ and it is ranked 5th on the
+of all developers were using C# regularly, [#f2]_ and it is ranked 5th on the
 Tiobe index behind C, Java, Python, and C++. [#f1]_
 
 StackOverflow, a popular website for coding help, was built in C#. It also marks
@@ -526,7 +531,7 @@ that include the C# keyword in their job description on LinkedIn.
   ..
 
 The possibilities of C# are endless. The language will continue to evolve as the
-years go on and will remain prevalent in the coding world. Whether looking to
+years go on and remain prevalent in the coding world. Whether looking to
 learn a new coding language or looking for a new job, C# shows opportunities
 for people who are interested.
 
