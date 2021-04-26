@@ -4,7 +4,7 @@ History of C#
 C# was created by Microsoft. It was first developed in 2000 by Anders Hejlsberg
 as a rival to Sun Microsystem's Java programming language. Microsoft had their
 own implementation of Java. They tried to add language features to Java and Sun
-said no. [#f5]_ Microsoft decided to abandon their Java product and create their own
+said, "no". [#f5]_ Microsoft decided to abandon their Java product and create their own
 which became known as C#. Understanding C# and its history helps determine its
 relevance in today's world compared to other languages.
 
@@ -18,7 +18,8 @@ by programmers.
     design goals was to make the C# language component-oriented, to add to the
     language itself all of the concepts that you need when you write components.
     Concepts such as properties, methods, events, attributes, and documentation
-    are all first-class language constructs." [#f6]_
+    are all first-class language constructs," said Anders Hejlsberg, founder
+    of Microsoft. [#f6]_
 
 A key factor of C# is that it is strongly, dynamically typed. Being a strong
 typed language means that any attempt to pass a wrong kind of parameter as an
@@ -34,8 +35,8 @@ languages.
     This figure shows whether programming languages are dynamic or static and
     strong or weak. [#f6]_
 
-Dynamic means that rules are applied at runtime, compared to static languages
-that apply their rules at compile time. [#f6]_ In the figure, Python and Clojure
+"Dynamic means that rules are applied at runtime, compared to static languages
+that apply their rules at compile time." [#f6]_ In the figure, Python and Clojure
 are more dynamic than C#, but C# is more dynamic than Scala or C++.
 
 C# is used for website development, applications, and games. The following are
@@ -53,6 +54,7 @@ examples of programs, applications, and games written in C#: [#f2]_
 To get to the advanced steps of creating an application or game, it is
 important to start with the basics and learn the fundamentals of the
 programming language.
+
 C# 1.0
 """"""
 
@@ -114,7 +116,6 @@ lambda expression:
 
   ..
 
-
 Lastly, Language-Integrated Query (LINQ) extends C#'s capabilities into
 allowing for query expressions to be made. This allows the language to perform
 SQL operations using C# syntax. These SQL-style queries are beneficial to
@@ -170,13 +171,14 @@ C# 5.0 was released with Visual Studio 2012. The two main purposes of this
 release were to incorporate ``async`` and ``await`` concepts for asynchronous
 programming. "When these features came out in 2012, C# changed the game again
 by baking asynchrony into the language as a first-class participant." [#f4]_
-These two words go hand in hand. When the compiler sees the word ``async`` it
+These two words go hand in hand. When the compiler sees the word ``async``, it
 looks for the word ``await``.
 
 Sample: [#f6]_
 
   .. code-block:: c#
     :linenos:
+    :emphasize-lines: 9, 12
 
       static void Main(string[] args)
       {
@@ -200,7 +202,7 @@ Output: [#f6]_
   .. figure:: awaitOutput.png
     :width: 75%
 
-    Output of ``await`` function code.
+    Output of function using ``async`` and ``await``.
 
 Another smaller part of this release was caller info attributes. This
 enhancement is beneficial for diagnostics and logging, but didn't have as big
@@ -232,22 +234,20 @@ This version release included Roslyn the compiler as a service which was written
 in C#. [#f4]_ A compiler in the same language as your code allows new benefits
 in the IDE for editing and compiling your code.
 
-
 C# 7.0
 """"""
 
-
 C# 7.0 was released with Visual Studio 2017. The most important features of
-this release include new support for tuples and deconstructions. You no longer
-have to use the ``Tuple`` Class to declare tuples thanks to pattern matching,
-the compiler can handle declarations that include a tuple syntax next to a var
+this release include new support for tuples and deconstructions. Declaring tuples
+using the ``Tuple`` Class is not needed anymore. Pattern matching allows the
+compiler to handle declarations that include a tuple syntax next to a var
 definition. [#f6]_
 
   .. code-block:: c#
 
     (int n, string s) = ( 8, "coding" );
 
-Function sample: [#f6]_
+The following is a sample of code that uses the new tuple syntax: [#f6]_
 
   .. code-block:: c#
     :linenos:
@@ -263,50 +263,49 @@ Function sample: [#f6]_
         return result;
       }
 
-For this function, the return valid is a tuple. This allows a sum of numbers
-and the count of the numbers being added to be calculated.
+For this function, the return value is a tuple. This allows a sum of numbers
+and the count of the numbers that's being added to be calculated.
 
 Deconstruction allows us to deconstruct/decompose an object into parts. The
 ``Deconstruct`` method must be defined to deconstruct and object. For example,
 decomposing a DateTime Value declaration would look like this: [#f6]_
 
   .. code-block:: c#
+    :linenos:
 
-    static void Deconstruct(this DateTime dt, out int hour, out int minute,
-      out int second)
-    {
-      hour = dt.Hour;
-      minute = dt.Minute;
-      second = dt.Second;
-    }
+      static void Deconstruct(this DateTime dt, out int hour, out int minute, out int second)
+      {
+        hour = dt.Hour;
+        minute = dt.Minute;
+        second = dt.Second;
+      }
 
 The following are point releases and the new features and enhancements
 included in each version.
 
-
   C# 7.1
 
-    * async Main method
-    * default literal expressions
-    * inferred tuple element names
-    * pattern matching on generic type parameters
+    * Async Main method
+    * Default literal expressions
+    * Inferred tuple element names
+    * Pattern matching on generic type parameters
 
   C# 7.2
 
-    * ``private protected`` access modifier
-    * conditional ref expressions (``?:``)
-    * leading underscores for numeric literals before printed digits
+    * ``Private protected`` access modifier
+    * Conditional ref expressions (``?:``)
+    * Leading underscores for numeric literals before printed digits
 
   C# 7.3
 
-    * ability to test ``==`` and ``!=`` with tuple types
-    * fixed statements can be used with any type that supports a pattern
-    * additional generic constraints
+    * Ability to test ``==`` and ``!=`` with tuple types
+    * Fixed statements can be used with any type that supports a pattern
+    * Additional generic constraints
 
 C# 8.0
 """"""
 
-C# 8.0 targets .NET Core. Some features rely on new CLR capabilites, other on
+C# 8.0 targets .NET Core. Some features rely on new CLR capabilities, other on
 library types added only in .NET Core C#. [#f4]_ The following are some of
 the new features and enhancements to the language:
 
@@ -319,7 +318,7 @@ the new features and enhancements to the language:
 C# 9.0
 """"""
 
-The newest version of C# is 9.0. It was released in 2020 and relies on and is
+The newest version of C# is 9.0 was released in 2020. It is
 only compatible with .NET 5. "C# 9.0 focuses on features that support native
 cloud applications, modern software engineering practices, and more concise
 readable code. The biggest new features within this release are:
@@ -358,8 +357,8 @@ With the new release, this code would be simplified to:
     Console.WriteLine("Hello World!");
 
 Only code that performs that action required is necessary with the new top-level
-statements that replace the ``Main`` function in programs. Like the ``Main``
-function, there can only be one top-level function within the program. If two
+statements. These replace the ``Main`` function in programs. There can only be
+one top-level function within the program, like the ``Main`` function. If two
 statements are included, the compiler will send an error.
 
 Record Types
@@ -399,7 +398,7 @@ the following code:
 When a record type is defined, the compiler incorporates several other
 methods: [#f8]_
 
-  * Methods for value-baed equality comparisons
+  * Methods for value-based equality comparisons
   * Override for ``GetHashCode``
   * ``Copy`` and ``Clone`` members
   * ``PrintMembers`` and ``ToString``
@@ -407,7 +406,7 @@ methods: [#f8]_
 
 With record notion, objects are more like values and classes are enhanced to
 have value like behavior rather than encapsulated identified entity. [#f9]_
-Expressing record objects that are strings are easier. A record that is a
+Expressing record objects that are strings is easier. A record that is a
 string type can be expressed using the following code to print out all its
 attributes.
 
@@ -523,7 +522,7 @@ that include the C# keyword in their job description on LinkedIn.
   .. figure:: jobSearchResults.png
     :width: 75%
 
-    Figure taken from LinkenIn search results.
+    Figure taken from LinkedIn search results.
   ..
 
 The possibilities of C# are endless. The language will continue to evolve as the
